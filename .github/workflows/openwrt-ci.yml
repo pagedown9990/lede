@@ -55,7 +55,7 @@ jobs:
       - name: Import external feeds
         working-directory: ./openwrt
         run: |
-          git clone https://github.com/Lienol/openwrt-package package/lienol
+          git clone https://github.com/Lienol/openwrt-package package
           git clone https://github.com/Dreamacro/clash package
 
       - name: Generate configuration file
