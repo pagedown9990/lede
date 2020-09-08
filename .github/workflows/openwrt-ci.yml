@@ -52,12 +52,7 @@ jobs:
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-      - name: Import external feeds
-        working-directory: ./openwrt
-        run: |
-          git clone https://github.com/Lienol/openwrt-package package
-          git clone https://github.com/Dreamacro/clash package
-
+      
       - name: Generate configuration file
         run: make defconfig
 
