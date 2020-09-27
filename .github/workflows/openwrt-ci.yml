@@ -53,6 +53,11 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
       
+      - name: Import external feeds
+        working-directory: ./openwrt
+        run: |
+          git clone https://github.com/Lienol/openwrt-package package/lienol
+        
       - name: Generate configuration file
         run: make defconfig
 
