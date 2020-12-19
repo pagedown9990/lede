@@ -55,7 +55,10 @@ jobs:
       
       - name: Import external feeds
         run: |
-          git clone https://github.com/Lienol/openwrt-package package/lienol
+          git clone https://github.com/xiaorouji/openwrt-passwall.git package/lean
+          git clone https://github.com/jerrykuku/luci-app-ttnode.git package/lean
+          git clone https://github.com/vernesong/OpenClash.git package/lean
+          git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean
         
       - name: Generate configuration file
         run: make defconfig
