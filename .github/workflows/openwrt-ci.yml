@@ -55,7 +55,9 @@ jobs:
       
       - name: Import external feeds
         run: |
-          git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
+          git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol/package
+          mkdir package/lienol/lienol
+          mv -f package/lienol/package/luci-app-passwall package/lienol/lienol           
           git clone https://github.com/jerrykuku/luci-app-ttnode.git package/ttnode
           git clone https://github.com/vernesong/OpenClash.git package/OpenClash
                   
